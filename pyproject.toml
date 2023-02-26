@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "udpeasy"
-version = "0.0.1"
+version = "0.0.3"
 authors = [
   { name="Johannes Rønning", email="johannesr@tietoevry.com" },
 ]
