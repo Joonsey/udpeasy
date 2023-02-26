@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "udpeasy"
+version = "0.0.1"
+authors = [
+  { name="Johannes Rønning", email="johannesr@tietoevry.com" },
+]
+description = "A minimal UDP wrapper"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+	"Development Status :: 2 - Pre-Alpha",
+	"Topic :: System :: Networking",
+	"Topic :: Internet",
+	"Topic :: Games/Entertainment"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/joonsey/udpeasy"
+"Bug Tracker" = "https://github.com/pypa/joonsey/udpeasy/issues"
