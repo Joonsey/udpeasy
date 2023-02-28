@@ -50,7 +50,7 @@ class PacketType:
 	EVENT = 3
 ```
 
-Would also advocate for making a enum for formating the payloads. This asbtraction will simplify packing, and unpacking on both ends.
+Would also advocate for making an enum for formating the payloads. This abstraction will simplify packing, and unpacking on both ends.
 
 ```python
 import struct
@@ -61,8 +61,8 @@ class PayloadFormat:
 	POSITION = struct.Struct("II")
 	EVENT = struct.Struct("I")
 ```
-(if the classes above are unfamiliar to you)
-[read this](https://docs.python.org/3/library/struct.html#format-characters)
+(if the classes above are unfamiliar to you
+[read this](https://docs.python.org/3/library/struct.html#format-characters))
 (alternatively [you can use JSON](#alternatives).)
 
 
@@ -74,7 +74,7 @@ class EventTypes:
 	WON = 3
 	LOST = 4
 ```
-We can now utilize the astractions we have made to simplify the first example.
+We can now utilize the abstractions we have made to simplify the first example.
 ```python
 import udpeasy
 
