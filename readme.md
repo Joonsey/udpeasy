@@ -47,7 +47,7 @@ class PacketType:
 	MESSAGE = 1
 	SCORE = 2
 	POSITION = 3
-	EVENT = 3
+	EVENT = 4
 ```
 
 Would also advocate for making an enum for formating the payloads. This abstraction will simplify packing, and unpacking on both ends.
@@ -114,7 +114,7 @@ server.run()
 ```
 
 ## Alternatives
-Okay that's all good an well for our basic types with specific lengths. How about arrays or objects with a dynamic length?
+Okay that's all good and well for our basic types with specific lengths. How about arrays or objects with a dynamic length?
 
 I would recommend just using json for this purpose.
 ```python
