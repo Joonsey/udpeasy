@@ -1,8 +1,8 @@
-# UDP made easy
+# UDP Made Easy
 
 a simple udp wrapper.
 
-## Quick start
+## Quick Start
 
 We can use the base class Server to inherit the basic common properties of a server. 
 We need to overload the abstract method, handle_request
@@ -39,18 +39,18 @@ server.start()
 server.stop()
 ```
 
-## Good practise
+## Good Practise
 
-Make an enum with the packet types.
+Make an **enum** with the packet types.
 ```python
 class PacketType:
 	MESSAGE = 1
 	SCORE = 2
 	POSITION = 3
-	EVENT = 3
+	EVENT = 4
 ```
 
-Would also advocate for making a enum for formating the payloads. This asbtraction will simplify packing, and unpacking on both ends.
+Would also advocate for making an enum for formating the payloads. This abstraction will simplify packing, and unpacking on both ends.
 
 ```python
 import struct
@@ -61,8 +61,8 @@ class PayloadFormat:
 	POSITION = struct.Struct("II")
 	EVENT = struct.Struct("I")
 ```
-(if the classes above are unfamiliar to you)
-[read this](https://docs.python.org/3/library/struct.html#format-characters)
+(if the classes above are unfamiliar to you
+*[read this](https://docs.python.org/3/library/struct.html#format-characters)*)
 (alternatively [you can use JSON](#alternatives).)
 
 
@@ -74,7 +74,7 @@ class EventTypes:
 	WON = 3
 	LOST = 4
 ```
-We can now utilize the astractions we have made to simplify the first example.
+We can now utilize the abstractions we have made to simplify the first example.
 ```python
 import udpeasy
 
@@ -113,8 +113,8 @@ server = Myserver("localhost", "1234")
 server.run()
 ```
 
-## alternatives
-Okay that's all good an well for our basic types with specific lengths. How about arrays or objects with a dynamic length?
+## Alternatives
+Okay that's all good and well for our basic types with specific lengths. How about arrays or objects with a dynamic length?
 
 I would recommend just using json for this purpose.
 ```python
