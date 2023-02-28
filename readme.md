@@ -62,7 +62,7 @@ class PayloadFormat:
 	EVENT = struct.Struct("I")
 ```
 (if the classes above are unfamiliar to you
-[read this](https://docs.python.org/3/library/struct.html#format-characters))
+*[read this](https://docs.python.org/3/library/struct.html#format-characters)*)
 (alternatively [you can use JSON](#alternatives).)
 
 
