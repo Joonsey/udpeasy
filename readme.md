@@ -1,8 +1,8 @@
-# UDP made easy
+# UDP Made Easy
 
 a simple udp wrapper.
 
-## Quick start
+## Quick Start
 
 We can use the base class Server to inherit the basic common properties of a server. 
 We need to overload the abstract method, handle_request
@@ -39,7 +39,7 @@ server.start()
 server.stop()
 ```
 
-## Good practise
+## Good Practise
 
 Make an enum with the packet types.
 ```python
@@ -113,7 +113,7 @@ server = Myserver("localhost", "1234")
 server.run()
 ```
 
-## alternatives
+## Alternatives
 Okay that's all good an well for our basic types with specific lengths. How about arrays or objects with a dynamic length?
 
 I would recommend just using json for this purpose.
