@@ -1,20 +1,19 @@
+from abc import ABC, abstractmethod
 import socket
-from udpeasy.packet import *
 import time
-import sys
 import threading
 
 
-class Server:
+class Server(ABC):
     def __init__(self, host, port) -> None:
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.host = host
         self.port = port
         self.last_packet_time = time.time()
 
+    @abstractmethod
     def handle_request(self, data, client_address):
-        """overload this method"""
-        pass
+        ...
 
     def run(self):
         self.sock.bind((self.host, self.port))
