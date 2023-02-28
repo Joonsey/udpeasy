@@ -41,7 +41,7 @@ server.stop()
 
 ## Good Practise
 
-Make an enum with the packet types.
+Make an **enum** with the packet types.
 ```python
 class PacketType:
 	MESSAGE = 1
